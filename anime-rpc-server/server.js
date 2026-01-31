@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const clientId = 'YOUR_APP_IDE'; // discord application id
+const clientId = 'YOUR_APP_ID'; // discord application id
 // this houses the name and image for the application
 let rpc = new RPC.Client({ transport: 'ipc' });
 
@@ -138,4 +138,5 @@ app.post('/update-presence', async (req, res) => {
 connectToDiscord();
 
 // local run
+
 app.listen(3000, () => console.log('Server running on port 3000'));
